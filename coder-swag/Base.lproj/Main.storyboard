@@ -30,19 +30,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x9w-8E-qWH">
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x9w-8E-qWH">
                                 <rect key="frame" x="0.0" y="64.5" width="375" height="538.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="126" id="FhB-VY-RiG" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="126" id="FhB-VY-RiG" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FhB-VY-RiG" id="dGF-Nx-GKl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="xMC-RK-Sco">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="125.5"/>
+                                                    <rect key="frame" x="0.0" y="3" width="375" height="119.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybC-wM-gfa">
                                                     <rect key="frame" x="141" y="49" width="93" height="28"/>
@@ -52,20 +52,21 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="xMC-RK-Sco" secondAttribute="bottom" id="7Gi-lO-JGc"/>
-                                                <constraint firstItem="xMC-RK-Sco" firstAttribute="top" secondItem="dGF-Nx-GKl" secondAttribute="top" id="85o-xL-i6X"/>
+                                                <constraint firstItem="xMC-RK-Sco" firstAttribute="top" secondItem="dGF-Nx-GKl" secondAttribute="top" constant="3" id="4C5-Y9-feg"/>
                                                 <constraint firstItem="ybC-wM-gfa" firstAttribute="centerY" secondItem="dGF-Nx-GKl" secondAttribute="centerY" id="FXd-2W-oi8"/>
                                                 <constraint firstItem="xMC-RK-Sco" firstAttribute="leading" secondItem="dGF-Nx-GKl" secondAttribute="leading" id="Szk-0W-iWK"/>
                                                 <constraint firstAttribute="trailing" secondItem="xMC-RK-Sco" secondAttribute="trailing" id="e35-KZ-PsK"/>
+                                                <constraint firstAttribute="bottom" secondItem="xMC-RK-Sco" secondAttribute="bottom" constant="3" id="kUi-mx-dVi"/>
                                                 <constraint firstItem="ybC-wM-gfa" firstAttribute="centerX" secondItem="dGF-Nx-GKl" secondAttribute="centerX" id="rUZ-kO-IfG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="CategoryImage" destination="xMC-RK-Sco" id="v7m-uR-b24"/>
-                                            <outlet property="CategoryTitle" destination="ybC-wM-gfa" id="haY-qG-Iof"/>
+                                            <outlet property="categoryImage" destination="xMC-RK-Sco" id="JwD-Pg-sQx"/>
+                                            <outlet property="categoryTitle" destination="ybC-wM-gfa" id="Wxa-m1-sRy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -81,7 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="CODER SWAG" id="Bvu-cN-av3"/>
                     <connections>
-                        <outlet property="CategoryTable" destination="x9w-8E-qWH" id="xMC-k4-gZs"/>
+                        <outlet property="categoryTable" destination="x9w-8E-qWH" id="BHt-Yw-Pvz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
