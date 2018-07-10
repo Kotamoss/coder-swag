@@ -19,6 +19,9 @@ class DataService {
         Category(title: "DIGITAL", imageName: "digital.png")
     ]
     
+    private let hats = [Product(title: "Devslopes Logo Graphic Beanie", price: "$19", imageName: "hat01.jpg"), Product(title: "Devslopes Logo Hat Black", price: "19", imageName: "hat02.jpg"), Product(title: "Devslopes Logo Hat White", price: "$19", imageName: "hat03.jpg"), Product(title:"Devslopes Logo Snapback", price: "$19", imageName: "hat04.jpg")]
+    
+    
     func getCategories() -> [Category] {
         return categories
     }
